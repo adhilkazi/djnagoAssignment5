@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+           
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(238, 235, 235);
+            text-align: center;
+            padding: 10px;
+           
+            font-family: sans-serif;
+        }
+
+        th {
+            background-color: rgb(14, 14, 15);
+            color: white    ;
+           font-family: sans-serif;
+            text-transform: uppercase;
+
+        }
+
+        td{
+            background-color: rgba(47, 46, 46, 0.313);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <form actcmon="">
+            {%csrf_token%}
+
+            <tr>
+                <th>
+                   id no
+                </th>
+                <th>
+                    firstname
+                 </th>
+
+                <th>
+                 last name
+                </th>
+
+                <th>
+                   email
+                </th>
+                <th>
+                    phone
+                </th>
+               
+                <th>
+                    password
+                </th>
+                <th>
+                    conform_password
+                </th>
+                <th>
+                   gender
+                </th>
+               
+            </tr>
+        </form>
+
+
+        <tr>
+            <td>{{cm.id}}</td>
+            <td>{{cm.firstname}}</td>
+            <td>{{cm.lastname}}</td>
+            <td>{{cm.email}}</td>
+            <td>{{cm.phone}}</td>
+            <td>{{cm.password}}</td>
+            <td>{{cm.conform_password}}</td>
+            <td>{{cm.gender}}</td>
+        </tr>
+       
+    </table>
+</body>
+
+</html>

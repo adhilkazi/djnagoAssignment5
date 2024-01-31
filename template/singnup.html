@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>€2017 Student Registration Form</title>
+    <style>
+        * {
+            
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+            
+        }
+
+        .main {
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url(https://img.freepik.com/free-photo/young-students-learning-library-bookshelves_1150-10544.jpg?)
+            
+            
+        }
+
+        .main-one {
+           padding: 40px;
+            display: grid;
+            justify-content: center;
+            margin-top: 7%;
+            background-color: rgba(0, 0, 0, 0.47);
+             color: aliceblue;
+
+
+
+
+        }
+
+        .main-child-one{
+            
+           
+            width: 600px;
+            background-color: rgb(255, 255, 255);
+         
+        }
+        .main-child{
+            display: flex;
+            justify-content: center;
+        }
+       .txt h1{
+        margin: auto;
+        margin-left: 400px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        text-transform: uppercase;
+       }
+
+       /* start */
+       body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        width: 400px;
+        font-family: sans-serif;
+       
+       
+      }
+      label {
+        display: block;
+        margin-top: 10px !important;
+        font-family: sans-serif;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"]
+      {
+        width: 100%;
+        padding: 7px;
+        margin-top: 5px;
+      }
+      input[type="password"]{
+
+      padding: 7px;
+      width: 187px;
+        
+      }
+      select {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(105, 25, 25, 0.884);
+        color: white;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      input{
+        border: 1px solid rgb(55, 55, 192);
+      }
+
+      .form-div{
+        width: 450px;
+        background-color: rgb(255, 255, 255);
+       padding: 10px;
+        margin: 50px;
+        color: black;
+
+
+      }
+       /* end */
+       .password{
+       display: flex;
+       gap: 25px;
+       
+       }
+       .main-child-one img{
+        width: 600px;
+        height: 600px;
+       }
+       .width{
+        width: 520px;
+
+       }
+       .log{
+
+      
+        color: aliceblue;
+        margin-top: 15px;
+       
+       }
+       p{
+        color: aliceblue;
+       }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="main">
+      
+     
+      
+        <div class="main-one">
+       <div class="txt">
+                <h1>
+                    student Registration form
+                </h1>
+        </div>
+
+        <div class=" main-child"> 
+         
+            <div class="main-child-one width">
+               <div class="form-div"> 
+                <form action="" method="POST" enctype="multipart/form-data">
+                  {%csrf_token%}
+
+                    <label for="fname">FIRST NAME:</label>
+                    <input type="text" id="fname" name="firstname" required>
+              
+                    <label for="lname">LAST NAME:</label>
+                    <input type="text" id="lname" name="lastname" required>
+              
+                    <label for="email">EMAIL:</label>
+                    <input type="email" id="email" name="email" required>
+              
+                    <label for="phone">PHONE:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <div class="password">
+                        <span>
+                    <label for="pwd">PASSWORD:</label>
+                    <input type="password" id="pwd" name="password" minlength="8" required> </span>
+                </span>
+                   
+                <span>
+                    <label for="pwd">CONF PASSWORD:</label>
+                    <input type="password" id="pwd" name="conform_password" minlength="8" required>
+                </span>
+                </div>
+              
+                    <label for="gender">GENDER:</label>
+                    <select id="gender" name="gender" required>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+              
+                    <input type="submit" value="SUBMIT">
+                  </form>   
+                </div>
+                <!-- end -->
+            </div>
+            <div class="main-child-one"> 
+                 <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202007/jaikishan-patel-erauug2J5fM-un.jpeg" alt="">
+            </div>
+        </div>
+           
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
